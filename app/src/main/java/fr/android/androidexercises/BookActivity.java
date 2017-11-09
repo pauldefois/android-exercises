@@ -1,5 +1,6 @@
 package fr.android.androidexercises;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -22,6 +23,10 @@ public class BookActivity extends AppCompatActivity {
         sendNameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent libraryActivityResultIntent = new Intent(BookActivity.this, LibraryActivity.class);
+                libraryActivityResultIntent.putExtra("bookName", bookName);
+                setResult(RESULT_OK, libraryActivityResultIntent);
+                finish();
                 // TODO set result to book name in intent
                 // TODO finish current activity
             }
