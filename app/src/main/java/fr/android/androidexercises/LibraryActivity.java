@@ -36,7 +36,7 @@ public class LibraryActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 456) {
-            if (resultCode == Activity.RESULT_OK) {
+            if (resultCode == RESULT_OK) {
                 Toast.makeText(LibraryActivity.this, data.getStringExtra("bookName"), Toast.LENGTH_SHORT).show();
             }
         }

@@ -23,7 +23,7 @@ public class BookActivity extends AppCompatActivity {
         sendNameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent libraryActivityResultIntent = new Intent(BookActivity.this, LibraryActivity.class);
+                Intent libraryActivityResultIntent = new Intent();
                 libraryActivityResultIntent.putExtra("bookName", bookName);
                 setResult(RESULT_OK, libraryActivityResultIntent);
                 finish();
